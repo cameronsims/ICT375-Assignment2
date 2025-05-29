@@ -1,0 +1,146 @@
+/* Set our defaults */
+* {
+	font-family: calibri;
+}
+
+/* Make titles have a border on the side */
+h1, h2, h3, h4, h5, h6 {
+	border-left: 0.25rem solid black;
+	padding-left: 1rem;
+}
+
+h3 {
+	margin-left: 1rem;
+}
+
+h3 + *, h4 + *, h5 + *, h6 + * {
+	margin-left: 2rem;
+	
+	border: 0.1rem solid black;
+	padding: 1rem;
+}
+
+ul {
+	padding-left: 2rem;
+}
+li {
+	margin-bottom: 0.5rem;
+}
+
+/* Size images... */
+img {
+	width: 100%;
+	
+	margin: 0.5rem;
+	margin-bottom: 1rem;
+	border: 0.1rem solid black;
+	padding: 0;
+}
+
+/* Make our radio buttons / checkboxes pretty */
+input, select, button, [type="checkbox"] {
+	border: 0.5rem solid lightgray;
+	border-radius: 1rem;
+
+	background: lightgray;
+}
+
+/* Makes selection drop downs pretty */
+option {
+	border: 0.5rem solid white;
+	border-radius: 1rem;
+
+	background: white;
+}
+option:hover {
+	background: lightgray;
+	border-color: lightgray;
+}
+
+/* When a radio button is checked */
+[type="radio"], [type="checkbox"] {
+	accent-color: blue;
+}
+[type="radio"]:hover, [type="checkbox"]:hover {
+	accent-color: darkblue;
+}
+
+
+/* Gives our buttons some flair */
+[type="submit"], [type="button"], select {
+	font-weight: bold;
+}
+[type="submit"]:hover, [type="button"]:hover, select:hover {
+	background: gray;
+	border-color: gray;
+}
+[type="submit"]:active, [type="button"]:active, select:active, option:active {
+	background: red;
+	border-color: red;
+}
+
+/* Used to track outputs */
+#output-container {
+	
+}
+
+#output-container #output-img {
+	display: none;
+	margin-bottom: 1rem;
+}
+
+/* Table non-sense */
+#output-container table {
+	display: none;
+	border: 0.1rem solid black;
+	border-spacing: 0;
+	width: 100%;
+}
+
+#output-container table thead tr th,
+#output-container table tbody tr td {
+	text-align: center;
+	border: 0.1rem solid black;
+	padding: 0.5rem;
+}
+#output-container table thead {
+	top: 0rem;
+	position: sticky;
+}
+#output-container table thead tr {
+	background: tan;
+}
+#output-container table tbody tr:nth-child(odd) {
+	background: white;
+}
+#output-container table tbody tr:nth-child(even) {
+	background: lightgrey;
+}
+
+/* Make options inline */
+#interp-options {
+	margin-left: 1rem;
+	display: inline-block;
+}
+
+/* Used to give distance between elements */
+#form-request > * {
+	margin-bottom: 1rem;
+}
+
+/* Used when a new error occurs */
+#error-container {
+	margin-top: 1rem;
+	padding: 0.5rem;
+}
+
+#error-container p {
+	margin: 0;
+	padding: 0.5rem;
+	
+	border: 0.5rem solid red;
+	border-radius: 0.5rem;
+	
+	color: white;
+	background: red;
+}

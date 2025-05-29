@@ -1,0 +1,11 @@
+{
+	"url": "eris.ad.murdoch.edu.au",
+	"port": 40200,
+	
+	"requestDB": "http://eris.ad.murdoch.edu.au/~S900432D/ict375/data",
+	
+	"html": {
+		"root": "./public/html/index.html",
+		"notfound": "./public/html/notfound.html"
+	}
+}

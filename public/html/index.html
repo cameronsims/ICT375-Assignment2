@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ICT375 - 34829454</title>
+		<meta charset="utf-8">
+		
+		<!-- JQuery to handle AJAX etc... -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		
+		<!-- JavaScript -->
+		<script src="./js/form.js"></script>
+	</head>
+	<body>
+		<!-- Header non-sense -->
+		<h1>ICT375 - Assignment 2</h1>
+		<h2>Cameron Sims (34829454)</h2>
+
+		<h3>Navigation Menu</h3>
+		<ul id="#nav-navigation">
+			<li><a href="#nav-navigation">Navigation</a> - Allows for quick navigation between selections.</li>
+			<li><a href="#nav-input">Input</a> - Allows for submission of requests.</li>
+			<li><a href="#nav-notif">Notifications</a> - Used to show when the request/response fails.</li>
+			<li><a href="#nav-output">Output</a> - Shows output of successful output.</li>
+		</ul>
+		
+		<h3 id="nav-input">Input</h3>
+		<form id="form-request">
+			<!-- Radio Group used to find out what year the user wants.  -->
+			<table>
+				<!-- Point where options are entered... -->
+				<tbody id="year-container">
+					<tr>
+						<td rowspan="3">Year(s):</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<!-- Used tp find out what months the user wants -->
+			<table>
+				<!-- Used to input options -->
+				<tbody id="month-container">
+					<tr>
+						<td  rowspan="5">Month(s):</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<!-- What measurement we're using...  -->
+			<div id="measurements-container">
+				<label>Measurement:</label>
+			</div>
+			
+			<!-- What format we want the response in -->
+			<div id="format-container">
+				<label>Format:</label>
+			</div>
+
+			<!-- If we want to do interp -->
+			<div id="interp-container">
+				<label>Interpolation:</label>
+				<div id="interp-options"></div>
+			</div>
+			
+			<!-- Submits the form... -->
+			<input type="submit" value="Submit"/>
+			
+			<!-- Reset the form -->
+			<input type="button" value="Reset" onclick="form_reset()"/>
+		</form>
+
+		<h3 id="nav-notif">Notifications</h3>
+		<div id="error-container"></div>
+
+		<h3 id="nav-output">Output</h3>
+		<div id="output-container">
+			<div id="output-img">
+				<img src="null" alt="Graph of Results"/>
+				<div>
+					<h4>Legend</h4>
+					<div>
+						<p style="color: blue">Blue - Wind Speed (km/h)</p>
+						<p style="color: red" >Red - Solar Radiation (kWh/m<sup>2</sup>)</p>
+					</div>
+				</div>
+			</div>
+				
+			<table>
+			
+				<thead>
+					<tr>
+						<th>Year</th>
+						<th>Month</th>
+						<th>Average Wind Speed (km/h)</th>
+						<th>Total Solar Radiation (kWh/m<sup>2</sup>)</th>
+						<th>Record Amount</th>
+					</tr>
+				</thead>
+				<tbody id="output-body">
+				
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
